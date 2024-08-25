@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* body {
+  padding-top: 5rem;
+} */
+
+.active {
+  @apply text-green-500 underline;
+}
+
+.btn {
+  @apply px-4 py-2 rounded;
+}
+
+.btn[disabled] {
+  @apply opacity-50;
+}
+
+.btn-green {
+  @apply text-white bg-green-600 hover:bg-green-800;
+}
+
+.alert {
+  @apply p-4 rounded-lg;
+}
+
+.alert-error {
+  @apply bg-red-100 text-red-700 border-red-200;
+}
+
+.row {
+  @apply flex flex-wrap;
+}
+
+.product:hover {
+  box-shadow: rgba(50, 235, 53, 0.55) 0px 2px 4px -1px,
+    rgba(50, 235, 53, 0.55) 0px 4px 5px 0px,
+    rgba(50, 235, 53, 0.55) 0px 1px 10px 0px;
+  scale: 1.05;
+}
+.product .btn {
+  transition: transform 1s, opacity 1s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+.product:hover .btn {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-top: 5rem;
+  }
+}
