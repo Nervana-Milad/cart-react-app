@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./components/Layout/Layout";
 import Error from "./components/Error/Error";
 import Home from "./components/Home/Home";
@@ -27,7 +27,7 @@ import ResetPassword from "./components/ResetPassword/ResetPassword";
 import NewPassword from "./components/NewPassword/NewPassword";
 function App() {
   const queryClient = new QueryClient();
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "",
       element: <Layout></Layout>,

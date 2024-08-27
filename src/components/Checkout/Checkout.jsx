@@ -49,7 +49,7 @@ function Checkout() {
         navigate("/cart");
       } else {
         toast.success("Payment done successfully");
-        navigate("/allorders");
+        // navigate("/allorders");
       }
       removeAllProducts();
     } else {
