@@ -39,14 +39,14 @@ function Checkout() {
     setIsLoading(true);
     console.log("Submit");
     const url = isOnline
-      ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://localhost:5173`
+      ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=http://cart-react-application.netlify.app`
       : `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`;
 
     const res = await getPayment(url, values);
     if (res.status == "success") {
       if (isOnline) {
         window.location.href = res.session.url;
-        navigate("/");
+        navigate("/cart");
       } else {
         toast.success("Payment done successfully");
         navigate("/allorders");
