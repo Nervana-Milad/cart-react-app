@@ -33,7 +33,7 @@ function Wishlist() {
     const res = await removeFromWishlist(productId);
     if (res.status === "success") {
       toast.success("Product removed successfully");
-      // getWishlistDetails();
+      getWishlistDetails();
     } else {
       toast.error("Something went wrong!");
     }
