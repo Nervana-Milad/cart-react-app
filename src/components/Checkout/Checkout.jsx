@@ -39,7 +39,7 @@ function Checkout() {
     setIsLoading(true);
     console.log("Submit");
     const url = isOnline
-      ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://cart-react-application.netlify.app/`
+      ? `https://ecommerce.routemisr.com/api/v1/orders/checkout-session/${cartId}?url=https://cart-react-application.netlify.app`
       : `https://ecommerce.routemisr.com/api/v1/orders/${cartId}`;
 
     const res = await getPayment(url, values);
