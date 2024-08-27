@@ -46,10 +46,10 @@ function Checkout() {
     if (res.status == "success") {
       if (isOnline) {
         window.location.href = res.session.url;
-        navigate("/cart");
+        // navigate("/cart");
       } else {
         toast.success("Payment done successfully");
-        // navigate("/allorders");
+        navigate("/allorders");
       }
       removeAllProducts();
     } else {
