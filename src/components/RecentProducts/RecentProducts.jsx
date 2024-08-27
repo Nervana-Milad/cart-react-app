@@ -9,7 +9,6 @@ function RecentProducts() {
     queryKey: ["RecentProducts"],
     queryFn: () => getRecentProducts(),
   });
-  // console.log("RecentProducts: ", data);
 
   async function getRecentProducts() {
     return axios.get(`https://ecommerce.routemisr.com/api/v1/products`);
